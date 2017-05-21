@@ -7,16 +7,18 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 class UsersTableViewController: UITableViewController, UserDelegate {
  
     @IBOutlet var table: UITableView!
     
-    var users:[UserModel] = []
+    var reference : ReferenceManager! = nil
     
+    var users:[UserModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reference =  ReferenceManager()
         print("UsersTableViewController viewDidLoad")
         
     }
@@ -30,6 +32,18 @@ class UsersTableViewController: UITableViewController, UserDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func function() {
+        reference.getReference().observe(DataEventType.childAdded, with: { (snapshot) in
+            print("chiladded")
+            let  snapshot = snapshot.value as? [String : String] ?? [:]
+            let  snap = [String](snapshot.values)
+            if(snap.count == 3) {
+                let user = UserModel(snap[0], snap[1], snap[2])
+                self.users.append(user)
+            }
+        })
+        
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

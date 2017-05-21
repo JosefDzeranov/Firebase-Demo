@@ -12,6 +12,7 @@ import FirebaseDatabase
 class NewUserViewController: UIViewController {
 
     var delegate: UserDelegate!
+    let reference : ReferenceManager = ReferenceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +58,7 @@ class NewUserViewController: UIViewController {
         
         print("Adding new user - ", user.firstName, user.secondName, user.thirdName)
         delegate.addUser(user: user)
-        let ref = Database.database().reference()
-        ref.child("users").setValue( user.toAnyObject() ) { (error, dbref) in
-            if error != nil {
-                guard let errorDescription = error?.localizedDescription else { return }
-                debugPrint("Error when setting private card reference: ", errorDescription)
-            }
-            print("success send user")
-        }
+        reference.setValue(for: user.toAnyObject())
     }
     /*
     // MARK: - Navigation

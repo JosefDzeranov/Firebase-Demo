@@ -13,7 +13,7 @@ struct ReferenceManager {
     private let usersRef = Database.database().reference(withPath: "users")
     
     func setValue(for model: Any) {
-        let id = usersRef.childByAutoId().key
+        let id = usersRef.childByAutoId().key+"."
         usersRef.setValue( [id, model]) { (error, ref) in
             if error != nil {
                 guard let errorDescription = error?.localizedDescription else { return }
