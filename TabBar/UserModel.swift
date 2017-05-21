@@ -18,4 +18,12 @@ public class UserModel {
         self.secondName = secondName
         self.thirdName = thirdName
     }
+    
+    func toAnyObject() -> Any {
+        return [
+            "firstName": firstName,
+            "secondName": secondName,
+            "thirdName": thirdName
+               ]
+    }
 }

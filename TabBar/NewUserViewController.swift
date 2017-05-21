@@ -58,7 +58,12 @@ class NewUserViewController: UIViewController {
         print("Adding new user - ", user.firstName, user.secondName, user.thirdName)
         delegate.addUser(user: user)
         let ref = Database.database().reference()
-        ref.child("users").setValue(["username": user])
+        ref.child("users").setValue(user.toAnyObject()) { (error, dbref) in
+            if error != nil {
+                guard let errorDescription = error?.localizedDescription else { return }
+                debugPrint("Error when setting private card reference: ", errorDescription)
+            }
+        }
     }
     /*
     // MARK: - Navigation
