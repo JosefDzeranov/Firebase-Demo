@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83731ECF8786005F39A5 /* AppDelegate.swift */; };
-		EF2B83761ECF8786005F39A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83751ECF8786005F39A5 /* ViewController.swift */; };
 		EF2B83791ECF8786005F39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2B83771ECF8786005F39A5 /* Main.storyboard */; };
 		EF2B837B1ECF8786005F39A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2B837A1ECF8786005F39A5 /* Assets.xcassets */; };
 		EF2B837E1ECF8786005F39A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2B837C1ECF8786005F39A5 /* LaunchScreen.storyboard */; };
 		EF2B83891ECF8786005F39A5 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83881ECF8786005F39A5 /* TabBarTests.swift */; };
 		EF2B83941ECF8786005F39A5 /* TabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83931ECF8786005F39A5 /* TabBarUITests.swift */; };
+		EF4E75CC1ECF9671001C2C34 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E75CB1ECF9671001C2C34 /* UserModel.swift */; };
+		EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */; };
+		EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A277F1ED04A8000C6395B /* UserDelegate.swift */; };
+		EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		EF2B83701ECF8786005F39A5 /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2B83731ECF8786005F39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF2B83751ECF8786005F39A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF2B83781ECF8786005F39A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF2B837A1ECF8786005F39A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF2B837D1ECF8786005F39A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		EF2B838F1ECF8786005F39A5 /* TabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2B83931ECF8786005F39A5 /* TabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUITests.swift; sourceTree = "<group>"; };
 		EF2B83951ECF8786005F39A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4E75CB1ECF9671001C2C34 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		EF5A277F1ED04A8000C6395B /* UserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
+		EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		EF2B83721ECF8786005F39A5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				EF4E75CA1ECF9651001C2C34 /* Models */,
 				EF2B83731ECF8786005F39A5 /* AppDelegate.swift */,
-				EF2B83751ECF8786005F39A5 /* ViewController.swift */,
 				EF2B83771ECF8786005F39A5 /* Main.storyboard */,
 				EF2B837A1ECF8786005F39A5 /* Assets.xcassets */,
 				EF2B837C1ECF8786005F39A5 /* LaunchScreen.storyboard */,
 				EF2B837F1ECF8786005F39A5 /* Info.plist */,
+				EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */,
+				EF5A277F1ED04A8000C6395B /* UserDelegate.swift */,
+				EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -123,6 +132,14 @@
 				EF2B83951ECF8786005F39A5 /* Info.plist */,
 			);
 			path = TabBarUITests;
+			sourceTree = "<group>";
+		};
+		EF4E75CA1ECF9651001C2C34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF4E75CB1ECF9671001C2C34 /* UserModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF2B83761ECF8786005F39A5 /* ViewController.swift in Sources */,
+				EF4E75CC1ECF9671001C2C34 /* UserModel.swift in Sources */,
+				EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */,
 				EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */,
+				EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */,
+				EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +534,7 @@
 				EF2B839A1ECF8786005F39A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF2B839B1ECF8786005F39A5 /* Build configuration list for PBXNativeTarget "TabBarTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +543,7 @@
 				EF2B839D1ECF8786005F39A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF2B839E1ECF8786005F39A5 /* Build configuration list for PBXNativeTarget "TabBarUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +552,7 @@
 				EF2B83A01ECF8786005F39A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
