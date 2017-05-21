@@ -7,13 +7,16 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 public class UserModel {
-    var firstName:String!
-    var secondName:String!
-    var thirdName:String!
+    
+    var userId: DatabaseReference!
+    var firstName: String!
+    var secondName: String!
+    var thirdName: String!
     
     init (_ firstName:String, _ secondName:String, _ thirdName:String) {
+        userId = nil
         self.firstName = firstName
         self.secondName = secondName
         self.thirdName = thirdName

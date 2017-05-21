@@ -21,6 +21,7 @@
 		EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A277F1ED04A8000C6395B /* UserDelegate.swift */; };
 		EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */; };
 		EFD7D5B91ED2065E001E41BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD7D5B81ED2065E001E41BD /* GoogleService-Info.plist */; };
+		EFD7D5BC1ED21582001E41BD /* ReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7D5BB1ED21582001E41BD /* ReferenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EF5A27861ED1A61F00C6395B /* TabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5A27871ED1A61F00C6395B /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7D5B81ED2065E001E41BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFD7D5BB1ED21582001E41BD /* ReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		EF2B83721ECF8786005F39A5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				EFD7D5BA1ED21559001E41BD /* Helpers */,
 				EFD7D5B81ED2065E001E41BD /* GoogleService-Info.plist */,
 				EF4E75CA1ECF9651001C2C34 /* Models */,
 				EF2B83731ECF8786005F39A5 /* AppDelegate.swift */,
@@ -175,6 +178,14 @@
 				6CFDFD9B3F4941BD1D93A7FB /* Pods_TabBarUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFD7D5BA1ED21559001E41BD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EFD7D5BB1ED21582001E41BD /* ReferenceManager.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +476,7 @@
 				EF4E75CC1ECF9671001C2C34 /* UserModel.swift in Sources */,
 				EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */,
 				EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */,
+				EFD7D5BC1ED21582001E41BD /* ReferenceManager.swift in Sources */,
 				EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */,
 				EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */,
 			);
