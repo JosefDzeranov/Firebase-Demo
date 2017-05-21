@@ -53,7 +53,7 @@ class UsersTableViewController: UITableViewController, UserDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "user_cell", for: indexPath)
         let currentUser = users[indexPath.row]
-        let cellValue = "\(currentUser.secondName!) \(currentUser.firstName!) \(currentUser.thirdName!) "
+        let cellValue = "\(currentUser.secondName!) \(currentUser.firstName!) \(currentUser.thirdName!)pod 'Firebase/Database' "
         cell.textLabel?.text = cellValue
         return cell
     }

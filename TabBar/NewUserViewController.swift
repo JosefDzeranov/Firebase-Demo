@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class NewUserViewController: UIViewController {
 
@@ -53,8 +54,11 @@ class NewUserViewController: UIViewController {
     
     
     func AddNewUser(user: UserModel){
+        
         print("Adding new user - ", user.firstName, user.secondName, user.thirdName)
         delegate.addUser(user: user)
+        let ref = Database.database().reference()
+        ref.child("users").setValue(["username": user])
     }
     /*
     // MARK: - Navigation
