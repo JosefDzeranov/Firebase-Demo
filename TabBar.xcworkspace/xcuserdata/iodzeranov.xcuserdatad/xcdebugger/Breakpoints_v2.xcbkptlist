@@ -9,70 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TabBar/NewUserViewController.swift"
-            timestampString = "517086404.968542"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "NewUserViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TabBar/UsersTableViewController.swift"
-            timestampString = "517088425.869453"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "function()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TabBar.UsersTableViewController.function () -&gt; ()"
-                  moduleName = "TabBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iodzeranov/Documents/Develop/TabBar/TabBar/UsersTableViewController.swift"
-                  timestampString = "517089541.079054"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TabBar.UsersTableViewController.(function () -&gt; ()).(closure #1)"
-                  moduleName = "TabBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iodzeranov/Documents/Develop/TabBar/TabBar/UsersTableViewController.swift"
-                  timestampString = "517089541.083145"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TabBar/ReferenceManager.swift"
             timestampString = "517089463.273982"
             startingColumnNumber = "9223372036854775807"
@@ -81,38 +17,6 @@
             endingLineNumber = "17"
             landmarkName = "setValue(for:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TabBar.ReferenceManager.setValue (for : Any) -&gt; ()"
-                  moduleName = "TabBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iodzeranov/Documents/Develop/TabBar/TabBar/ReferenceManager.swift"
-                  timestampString = "517089541.104365"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "278">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TabBar.ReferenceManager.(setValue (for : Any) -&gt; ()).(closure #1)"
-                  moduleName = "TabBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iodzeranov/Documents/Develop/TabBar/TabBar/ReferenceManager.swift"
-                  timestampString = "517089541.106658"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

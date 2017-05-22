@@ -11,6 +11,7 @@
 		83ADFCF7FEEF9C08C21ED7B4 /* Pods_TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB52387105C95EFD80A2744 /* Pods_TabBar.framework */; };
 		C0D2C72108DC7998A3DBD781 /* Pods_TabBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFDFD9B3F4941BD1D93A7FB /* Pods_TabBarUITests.framework */; };
 		C6AD59F11ED2B9060014EFFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */; };
+		EF1F797B1ED372A2001010D7 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */; };
 		EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83731ECF8786005F39A5 /* AppDelegate.swift */; };
 		EF2B83791ECF8786005F39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2B83771ECF8786005F39A5 /* Main.storyboard */; };
 		EF2B837B1ECF8786005F39A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2B837A1ECF8786005F39A5 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		BF9D69F8DBDB57D90F9E31AC /* Pods-TabBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E617A4792EFCE81FD04B4B50 /* Pods-TabBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
 		EF2B83731ECF8786005F39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF2B83781ECF8786005F39A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF2B837A1ECF8786005F39A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */,
 				EF5A277F1ED04A8000C6395B /* UserDelegate.swift */,
 				EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */,
+				EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1F797B1ED372A2001010D7 /* UpdateUserViewController.swift in Sources */,
 				EF4E75CC1ECF9671001C2C34 /* UserModel.swift in Sources */,
 				EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */,
 				EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */,

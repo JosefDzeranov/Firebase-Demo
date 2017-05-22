@@ -104,8 +104,21 @@ class UsersTableViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+       self.performSegue(withIdentifier: "update_segue", sender: indexPath.row)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare segue")
+        debugPrint(sender ?? nil ?? "")
+        if(segue.identifier == "update_segue"){
+            let updateView = segue.destination as! UpdateUserViewController
+            let row = sender as! Int
+            let user = users[row]
+            updateView.user = user
+            
+            
+        }
+    }
     
     /*
      // Override to support conditional editing of the table view.
