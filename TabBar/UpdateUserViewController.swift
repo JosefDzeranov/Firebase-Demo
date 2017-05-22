@@ -11,7 +11,7 @@ import UIKit
 class UpdateUserViewController: UIViewController {
 
     var user: UserModel! = nil
-    
+    var reference : ReferenceManager! = nil
     
     
     @IBOutlet weak var firstName: UITextField!
@@ -19,13 +19,11 @@ class UpdateUserViewController: UIViewController {
     @IBOutlet weak var thirdName: UITextField!
     
     
-    @IBAction func Update(_ sender: UIButton) {
     
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        reference = ReferenceManager()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +38,9 @@ class UpdateUserViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func Update(_ sender: UIButton) {
+        reference.updateValue(user: user)
+    }
 
     /*
     // MARK: - Navigation

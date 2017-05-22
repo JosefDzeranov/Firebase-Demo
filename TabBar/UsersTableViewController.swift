@@ -115,8 +115,6 @@ class UsersTableViewController: UITableViewController  {
             let row = sender as! Int
             let user = users[row]
             updateView.user = user
-            
-            
         }
     }
     
