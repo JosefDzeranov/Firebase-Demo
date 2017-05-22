@@ -11,23 +11,17 @@ import FirebaseDatabase
 
 class NewUserViewController: UIViewController {
 
-    var delegate: UserDelegate!
-    let reference : ReferenceManager = ReferenceManager()
-    
+    var reference : ReferenceManager!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
+        reference = ReferenceManager()
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(NewUserViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK Outlets
@@ -57,7 +51,6 @@ class NewUserViewController: UIViewController {
     func AddNewUser(user: UserModel){
         
         print("Adding new user - ", user.firstName, user.secondName, user.thirdName)
-        delegate.addUser(user: user)
         reference.setValue(for: user.toAnyObject())
     }
     /*

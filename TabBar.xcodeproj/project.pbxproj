@@ -10,6 +10,7 @@
 		0C2002D3A66C81B3ACDA426C /* Pods_TabBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACF21657185FC41161D7C3B /* Pods_TabBarTests.framework */; };
 		83ADFCF7FEEF9C08C21ED7B4 /* Pods_TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB52387105C95EFD80A2744 /* Pods_TabBar.framework */; };
 		C0D2C72108DC7998A3DBD781 /* Pods_TabBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFDFD9B3F4941BD1D93A7FB /* Pods_TabBarUITests.framework */; };
+		C6AD59F11ED2B9060014EFFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */; };
 		EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83731ECF8786005F39A5 /* AppDelegate.swift */; };
 		EF2B83791ECF8786005F39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2B83771ECF8786005F39A5 /* Main.storyboard */; };
 		EF2B837B1ECF8786005F39A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2B837A1ECF8786005F39A5 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		ADB52387105C95EFD80A2744 /* Pods_TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C7BFC6FF44E8335BCA9646 /* Pods-TabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBar/Pods-TabBar.release.xcconfig"; sourceTree = "<group>"; };
 		BF9D69F8DBDB57D90F9E31AC /* Pods-TabBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E617A4792EFCE81FD04B4B50 /* Pods-TabBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF2B83731ECF8786005F39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF2B83781ECF8786005F39A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		EF2B83721ECF8786005F39A5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */,
 				EFD7D5BA1ED21559001E41BD /* Helpers */,
 				EF4E75CA1ECF9651001C2C34 /* Models */,
 				EF2B83731ECF8786005F39A5 /* AppDelegate.swift */,
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2B837E1ECF8786005F39A5 /* LaunchScreen.storyboard in Resources */,
+				C6AD59F11ED2B9060014EFFC /* GoogleService-Info.plist in Resources */,
 				EF2B837B1ECF8786005F39A5 /* Assets.xcassets in Resources */,
 				EF2B83791ECF8786005F39A5 /* Main.storyboard in Resources */,
 			);
