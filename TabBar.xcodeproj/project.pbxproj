@@ -20,7 +20,6 @@
 		EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */; };
 		EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A277F1ED04A8000C6395B /* UserDelegate.swift */; };
 		EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */; };
-		EFD7D5B91ED2065E001E41BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD7D5B81ED2065E001E41BD /* GoogleService-Info.plist */; };
 		EFD7D5BC1ED21582001E41BD /* ReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7D5BB1ED21582001E41BD /* ReferenceManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		EF5A27851ED1A61F00C6395B /* TabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5A27861ED1A61F00C6395B /* TabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5A27871ED1A61F00C6395B /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFD7D5B81ED2065E001E41BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFD7D5BB1ED21582001E41BD /* ReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				EFD7D5BA1ED21559001E41BD /* Helpers */,
-				EFD7D5B81ED2065E001E41BD /* GoogleService-Info.plist */,
 				EF4E75CA1ECF9651001C2C34 /* Models */,
 				EF2B83731ECF8786005F39A5 /* AppDelegate.swift */,
 				EF2B83771ECF8786005F39A5 /* Main.storyboard */,
@@ -308,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2B837E1ECF8786005F39A5 /* LaunchScreen.storyboard in Resources */,
-				EFD7D5B91ED2065E001E41BD /* GoogleService-Info.plist in Resources */,
 				EF2B837B1ECF8786005F39A5 /* Assets.xcassets in Resources */,
 				EF2B83791ECF8786005F39A5 /* Main.storyboard in Resources */,
 			);
