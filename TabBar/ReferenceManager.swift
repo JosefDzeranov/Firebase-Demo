@@ -23,6 +23,16 @@ struct ReferenceManager {
             print("success send user")
         }
     }
+    func deleteValue(id userId: String){
+        let ref = usersRef.child(userId)
+        ref.removeValue { (error, dbRef) in
+            if let error = error {
+                debugPrint(error)
+            }
+            debugPrint("success delete model with id = ", userId)
+        }
+    }
+    
      func getReference() ->DatabaseReference {
         return usersRef
     }

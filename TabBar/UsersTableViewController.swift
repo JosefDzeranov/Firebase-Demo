@@ -91,9 +91,13 @@ class UsersTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
-            print("Delete tapped")
+            print("Delete tapped", indexPath.row)
+            let userId = self.users[indexPath.row].userId!
+            self.reference.deleteValue(id: userId)
+            self.viewWillAppear(true)
         })
         deleteAction.backgroundColor = UIColor.red
+ 
         
         return [deleteAction]
     }
