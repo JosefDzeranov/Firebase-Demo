@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
-class UsersTableViewController: UITableViewController {
+class UsersTableViewController: UITableViewController  {
     
     @IBOutlet var table: UITableView!
     
@@ -19,10 +19,22 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reference =  ReferenceManager()
-        
+        //table.delegate = self
+        //table.dataSource = self
         print("UsersTableViewController viewDidLoad")
         
     }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
+            print("Delete tapped")
+        })
+        deleteAction.backgroundColor = UIColor.red
+        
+        return [deleteAction]
+    }
+    
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -43,10 +55,12 @@ class UsersTableViewController: UITableViewController {
     
     func function() {
         reference.getReference().observe(DataEventType.childAdded, with: { (snapshot) in
-            print("chiladded")
+            
             let  snapshot = snapshot.value as? [String : String] ?? [:]
             let  snap = [String](snapshot.values)
-            debugPrint(snap)
+            
+            debugPrint("snapshot   ", snap)
+            
             let user = UserModel(snap[2], snap[1], snap[0])
             self.users.append(user)
             self.tableView.insertRows(at: [IndexPath(row: self.users.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
@@ -74,6 +88,10 @@ class UsersTableViewController: UITableViewController {
         cell.textLabel?.text = cellValue
         print("cellforrowat")
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Delete"
     }
     /*
      // Override to support conditional editing of the table view.
