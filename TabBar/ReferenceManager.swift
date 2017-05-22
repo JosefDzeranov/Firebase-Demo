@@ -12,9 +12,10 @@ import FirebaseDatabase
 struct ReferenceManager {
     private let usersRef = Database.database().reference(withPath: "users")
     
-    func setValue(for model: Any) {
+    func setValue(for model: UserModel) {
         let ref = usersRef.childByAutoId()
-        ref.setValue( model) { (error, ref) in
+        model.userId = ref.key
+        ref.setValue( model.toAnyObject()) { (error, ref) in
             if error != nil {
                 guard let errorDescription = error?.localizedDescription else { return }
                 debugPrint("Error when setting private card reference: ", errorDescription)

@@ -25,15 +25,6 @@ class UsersTableViewController: UITableViewController  {
         
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
-        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
-            print("Delete tapped")
-        })
-        deleteAction.backgroundColor = UIColor.red
-        
-        return [deleteAction]
-    }
     
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -47,6 +38,7 @@ class UsersTableViewController: UITableViewController  {
         table.reloadData()
         print("viewWillAppear in UsersTableViewController")
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,7 +53,8 @@ class UsersTableViewController: UITableViewController  {
             
             debugPrint("snapshot   ", snap)
             
-            let user = UserModel(snap[2], snap[1], snap[0])
+            let user = UserModel(snap[0], snap[3], snap[1])
+            user.userId = snap[2]
             self.users.append(user)
             self.tableView.insertRows(at: [IndexPath(row: self.users.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
             
@@ -86,6 +79,7 @@ class UsersTableViewController: UITableViewController  {
         let currentUser = users[indexPath.row]
         let cellValue = "\(currentUser.secondName!) \(currentUser.firstName!) \(currentUser.thirdName!)"
         cell.textLabel?.text = cellValue
+        cell.detailTextLabel?.text = currentUser.userId
         print("cellforrowat")
         return cell
     }
@@ -93,6 +87,17 @@ class UsersTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "Delete"
     }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
+            print("Delete tapped")
+        })
+        deleteAction.backgroundColor = UIColor.red
+        
+        return [deleteAction]
+    }
+    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

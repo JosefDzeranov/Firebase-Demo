@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 public class UserModel {
     
-    var userId: DatabaseReference!
+    var userId: String!
     var firstName: String!
     var secondName: String!
     var thirdName: String!
@@ -24,6 +24,7 @@ public class UserModel {
     
     func toAnyObject() -> Any {
         return [
+            "userId": userId,
             "firstName": firstName,
             "secondName": secondName,
             "thirdName": thirdName

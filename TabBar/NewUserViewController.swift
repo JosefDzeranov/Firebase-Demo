@@ -51,7 +51,7 @@ class NewUserViewController: UIViewController {
     func AddNewUser(user: UserModel){
         
         print("Adding new user - ", user.firstName, user.secondName, user.thirdName)
-        reference.setValue(for: user.toAnyObject())
+        reference.setValue(for: user)
     }
     /*
     // MARK: - Navigation
