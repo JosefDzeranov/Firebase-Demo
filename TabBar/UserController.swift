@@ -9,11 +9,9 @@
 import Foundation
 class UserController {
     
-    var reference : ReferenceManager?
     var users:[String : UserModel]?
     
     init (){
-        reference = ReferenceManager()
         users = [:]
     }
     
@@ -23,9 +21,12 @@ class UserController {
     func addUser(user:UserModel){
         users?[user.userId] = user
     }
-    func getUser(userId: String) -> UserModel?{
+    func getUser(userId: String) -> UserModel{
         let user = users?[userId]
-        return user
+        return user!
     }
-    
+    func getUser(index: Int) -> UserModel {
+        let arrayUsers = users?.values as! [UserModel]
+        return arrayUsers[index]
+    }
 }
