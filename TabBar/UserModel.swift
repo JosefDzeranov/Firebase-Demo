@@ -15,12 +15,28 @@ public class UserModel {
     var secondName: String!
     var thirdName: String!
     
+    var reference: DatabaseReference?
+    
     init (_ firstName:String, _ secondName:String, _ thirdName:String) {
         userId = nil
         self.firstName = firstName
         self.secondName = secondName
         self.thirdName = thirdName
+        
+        reference = nil
     }
+    
+    init(snapshot: DataSnapshot) {
+        userId = snapshot.key
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        
+        firstName = snapshotValue["firstName"] as? String ?? ""
+        secondName = snapshotValue["secondName"] as? String ?? ""
+        thirdName = snapshotValue["thirdName"] as? String ?? ""
+        
+        reference = snapshot.ref
+    }
+    
     
     func toAnyObject() -> Any {
         return [
@@ -29,5 +45,11 @@ public class UserModel {
             "secondName": secondName,
             "thirdName": thirdName
                ]
+    }
+}
+
+extension UserModel: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "\(userId), \(firstName), \(secondName), \(thirdName)"
     }
 }

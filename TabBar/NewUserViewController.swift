@@ -24,7 +24,7 @@ class NewUserViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //MARK Outlets
+    //MARK: - Outlets
     
     @IBOutlet weak var firstNameLabel: UITextField!
     
@@ -33,7 +33,7 @@ class NewUserViewController: UIViewController {
     @IBOutlet weak var thirdNameLabel: UITextField!
     
     
-    //MARK Actions
+    //MARK: - Actions
     
     @IBAction func addUserButton(_ sender: Any) {
         let newUser = UserModel(firstNameLabel.text!, secondNameLabel.text!, thirdNameLabel.text!)
@@ -53,14 +53,4 @@ class NewUserViewController: UIViewController {
         print("Adding new user - ", user.firstName, user.secondName, user.thirdName)
         reference.setValue(for: user)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

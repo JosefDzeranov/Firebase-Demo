@@ -46,10 +46,20 @@ class UsersTableViewController: UITableViewController  {
     
     
     func function() {
-        reference.getReference().observe(DataEventType.childAdded, with: { (snapshot) in
+        reference.getReference().observe(DataEventType.childAdded, with: { [weak self] snapshot in
+            guard let numberOfItems = self?.users.count else {
+                debugPrint("")
+                return
+            }
+            let user = UserModel(snapshot: snapshot)
+            self?.users.append(user)
+
+            let indexPath = IndexPath(row: numberOfItems, section: 0)
+            self?.table.insertRows(at: [indexPath], with: .top)
             
-            let  snapshot = snapshot.value as? [String : String] ?? [:]
-            let  snap = [String](snapshot.values)
+            /*
+            let snapshot = snapshot.value as? [String : String] ?? [:]
+            let snap = [String](snapshot.values)
             
             debugPrint("snapshot   ", snap)
             
@@ -57,9 +67,11 @@ class UsersTableViewController: UITableViewController  {
             user.userId = snap[2]
             self.users.append(user)
             self.tableView.insertRows(at: [IndexPath(row: self.users.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
-            
+            */
         })
         
+        // ToDo: Implement observer for database changes
+        // ToDo: Design and implement separete controller for Database management where all observers will be stored, and data source
     }
     // MARK: - Table view data source
     
@@ -77,7 +89,7 @@ class UsersTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "user_cell", for: indexPath)
         let currentUser = users[indexPath.row]
-        let cellValue = "\(currentUser.secondName!) \(currentUser.firstName!) \(currentUser.thirdName!)"
+        let cellValue = "\(currentUser.firstName!) \(currentUser.secondName!) \(currentUser.thirdName!)"
         cell.textLabel?.text = cellValue
         cell.detailTextLabel?.text = currentUser.userId
         print("cellforrowat")
@@ -90,11 +102,18 @@ class UsersTableViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { [weak self] (action, indexPath) in
             print("Delete tapped", indexPath.row)
-            let userId = self.users[indexPath.row].userId!
-            self.reference.deleteValue(id: userId)
-            self.viewWillAppear(true)
+            
+            if let userId = self?.users[indexPath.row].userId {
+                // firebase reference removal
+                self?.reference.deleteValue(id: userId)
+                // datasource element removing
+                self?.users.remove(at: indexPath.row)
+                // table view element deletion
+                self?.table.deleteRows(at: [indexPath
+                    ], with: .fade)
+            }
         })
         deleteAction.backgroundColor = UIColor.red
  
@@ -109,11 +128,13 @@ class UsersTableViewController: UITableViewController  {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepare segue")
-        debugPrint(sender ?? nil ?? "")
+        debugPrint(String(describing: sender))
         if(segue.identifier == "update_segue"){
             let updateView = segue.destination as! UpdateUserViewController
             let row = sender as! Int
-            let user = users[row]
+            let user = self.users[row]
+            debugPrint("prepare segue, user -> ", user)
+            
             updateView.user = user
         }
     }
