@@ -10,6 +10,7 @@
 		0C2002D3A66C81B3ACDA426C /* Pods_TabBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACF21657185FC41161D7C3B /* Pods_TabBarTests.framework */; };
 		83ADFCF7FEEF9C08C21ED7B4 /* Pods_TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB52387105C95EFD80A2744 /* Pods_TabBar.framework */; };
 		C0D2C72108DC7998A3DBD781 /* Pods_TabBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFDFD9B3F4941BD1D93A7FB /* Pods_TabBarUITests.framework */; };
+		C62621FE1ED44B4A0041AB3A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62621FD1ED44B4A0041AB3A /* UserController.swift */; };
 		C6AD59F11ED2B9060014EFFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */; };
 		EF1F797B1ED372A2001010D7 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */; };
 		EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83731ECF8786005F39A5 /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		EF2B83941ECF8786005F39A5 /* TabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83931ECF8786005F39A5 /* TabBarUITests.swift */; };
 		EF4E75CC1ECF9671001C2C34 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E75CB1ECF9671001C2C34 /* UserModel.swift */; };
 		EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */; };
-		EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A277F1ED04A8000C6395B /* UserDelegate.swift */; };
 		EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */; };
 		EFD7D5BC1ED21582001E41BD /* ReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7D5BB1ED21582001E41BD /* ReferenceManager.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +51,7 @@
 		ADB52387105C95EFD80A2744 /* Pods_TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C7BFC6FF44E8335BCA9646 /* Pods-TabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBar/Pods-TabBar.release.xcconfig"; sourceTree = "<group>"; };
 		BF9D69F8DBDB57D90F9E31AC /* Pods-TabBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C62621FD1ED44B4A0041AB3A /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E617A4792EFCE81FD04B4B50 /* Pods-TabBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		EF2B83951ECF8786005F39A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4E75CB1ECF9671001C2C34 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
-		EF5A277F1ED04A8000C6395B /* UserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
 		EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		EF5A27851ED1A61F00C6395B /* TabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5A27861ED1A61F00C6395B /* TabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +114,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C62621FC1ED44B060041AB3A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EF4E75CA1ECF9651001C2C34 /* Models */,
+				EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */,
+				EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */,
+				EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */,
+				C62621FD1ED44B4A0041AB3A /* UserController.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		EF2B83671ECF8786005F39A5 = {
 			isa = PBXGroup;
 			children = (
@@ -131,18 +143,14 @@
 		EF2B83721ECF8786005F39A5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C62621FC1ED44B060041AB3A /* User */,
 				C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */,
 				EFD7D5BA1ED21559001E41BD /* Helpers */,
-				EF4E75CA1ECF9651001C2C34 /* Models */,
 				EF2B83731ECF8786005F39A5 /* AppDelegate.swift */,
 				EF2B83771ECF8786005F39A5 /* Main.storyboard */,
 				EF2B837A1ECF8786005F39A5 /* Assets.xcassets */,
 				EF2B837C1ECF8786005F39A5 /* LaunchScreen.storyboard */,
 				EF2B837F1ECF8786005F39A5 /* Info.plist */,
-				EF4E75CF1ECF99C5001C2C34 /* NewUserViewController.swift */,
-				EF5A277F1ED04A8000C6395B /* UserDelegate.swift */,
-				EF5A27811ED04B5000C6395B /* UsersTableViewController.swift */,
-				EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -480,9 +488,9 @@
 				EF4E75CC1ECF9671001C2C34 /* UserModel.swift in Sources */,
 				EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */,
 				EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */,
+				C62621FE1ED44B4A0041AB3A /* UserController.swift in Sources */,
 				EFD7D5BC1ED21582001E41BD /* ReferenceManager.swift in Sources */,
 				EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */,
-				EF5A27801ED04A8000C6395B /* UserDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

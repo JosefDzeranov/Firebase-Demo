@@ -19,10 +19,7 @@ class UsersTableViewController: UITableViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         reference =  ReferenceManager()
-        //table.delegate = self
-        //table.dataSource = self
         print("UsersTableViewController viewDidLoad")
-        
     }
     
     
@@ -104,6 +101,10 @@ class UsersTableViewController: UITableViewController  {
         
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { [weak self] (action, indexPath) in
             print("Delete tapped", indexPath.row)
+            
+            
+            
+            
             
             
             
