@@ -11,6 +11,7 @@
 		83ADFCF7FEEF9C08C21ED7B4 /* Pods_TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB52387105C95EFD80A2744 /* Pods_TabBar.framework */; };
 		C0D2C72108DC7998A3DBD781 /* Pods_TabBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFDFD9B3F4941BD1D93A7FB /* Pods_TabBarUITests.framework */; };
 		C62621FE1ED44B4A0041AB3A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62621FD1ED44B4A0041AB3A /* UserController.swift */; };
+		C66C55501ED5A548001E20ED /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66C554F1ED5A548001E20ED /* PhotoViewController.swift */; };
 		C6AD59F11ED2B9060014EFFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */; };
 		EF1F797B1ED372A2001010D7 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */; };
 		EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B83731ECF8786005F39A5 /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		B5C7BFC6FF44E8335BCA9646 /* Pods-TabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBar/Pods-TabBar.release.xcconfig"; sourceTree = "<group>"; };
 		BF9D69F8DBDB57D90F9E31AC /* Pods-TabBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C62621FD1ED44B4A0041AB3A /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		C66C554F1ED5A548001E20ED /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E617A4792EFCE81FD04B4B50 /* Pods-TabBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarUITests/Pods-TabBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1F797A1ED372A2001010D7 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		C66C554E1ED5A4D3001E20ED /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				C66C554F1ED5A548001E20ED /* PhotoViewController.swift */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
 		EF2B83671ECF8786005F39A5 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		EF2B83721ECF8786005F39A5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C66C554E1ED5A4D3001E20ED /* Photo */,
 				C62621FC1ED44B060041AB3A /* User */,
 				C6AD59F01ED2B9060014EFFC /* GoogleService-Info.plist */,
 				EFD7D5BA1ED21559001E41BD /* Helpers */,
@@ -489,6 +500,7 @@
 				EF4E75D01ECF99C5001C2C34 /* NewUserViewController.swift in Sources */,
 				EF2B83741ECF8786005F39A5 /* AppDelegate.swift in Sources */,
 				C62621FE1ED44B4A0041AB3A /* UserController.swift in Sources */,
+				C66C55501ED5A548001E20ED /* PhotoViewController.swift in Sources */,
 				EFD7D5BC1ED21582001E41BD /* ReferenceManager.swift in Sources */,
 				EF5A27821ED04B5000C6395B /* UsersTableViewController.swift in Sources */,
 			);

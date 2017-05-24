@@ -27,7 +27,12 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>PhotoGalery</string>
 	</array>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>PhotoGalery</string>
+    
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

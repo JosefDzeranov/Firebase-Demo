@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-1154" y="512"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="Xj6-mh-ges">
             <objects>
-                <viewController id="qfj-cq-Pg0" sceneMemberID="viewController">
+                <viewController id="qfj-cq-Pg0" customClass="PhotoViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="klz-5Y-AAT"/>
                         <viewControllerLayoutGuide type="bottom" id="jyN-Ge-tnX"/>
@@ -109,10 +109,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadButton:" destination="qfj-cq-Pg0" eventType="touchUpInside" id="Cz5-bw-ptt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Pf9-0m-VBk" id="32G-8a-PhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAm-gW-7kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
