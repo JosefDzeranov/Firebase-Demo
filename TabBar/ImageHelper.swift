@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 class ImageHelper {
     
-    static func ImagePNGToData(image:UIImage) -> Data{
-        let data = UIImagePNGRepresentation(image)
+    static func imageJPEGToData(image:UIImage) -> Data{
+        let data = UIImageJPEGRepresentation(image, 0.5)
         if let data = data {
             return data
         }
