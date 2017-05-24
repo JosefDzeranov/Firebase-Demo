@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class ImageHelper {
     
     static func imageJPEGToData(image:UIImage) -> Data{
@@ -17,6 +18,8 @@ class ImageHelper {
         }
         return Data()
     }
-    
-    
+    static func dataToImage(data: Data) -> UIImage {
+        let image = UIImage(data: data)
+        return image!
+    }
 }
