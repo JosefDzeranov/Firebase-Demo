@@ -36,7 +36,6 @@ struct ReferenceManager {
     func updateValue( user: UserModel){
         
         let ref = usersRef.child(user.userId)
-        ref.setValue(user.toAnyObject())
         ref.setValue(user.toAnyObject()) { (error, dbRef) in
             if let error = error {
                 debugPrint(error)

@@ -33,6 +33,8 @@ class UpdateUserViewController: UIViewController {
     }
 
     @IBAction func Update(_ sender: UIButton) {
-        reference.updateValue(user: user)
+        let updatedUser  = UserModel(firstName.text!, secondName.text!, thirdName.text!)
+        updatedUser.userId = user.userId
+        reference.updateValue(user: updatedUser)
     }
 }
