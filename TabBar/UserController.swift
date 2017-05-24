@@ -22,7 +22,8 @@ class UserController {
         users.removeValue(forKey: userId)
     }
     func removeUser(index: Int){
-        let arrayKeys = users?.keys as! [String]
+        guard let key = users?.keys else {return}
+        let arrayKeys = Array(key)
         removeUser(userId: arrayKeys[index])
     }
     
@@ -34,7 +35,8 @@ class UserController {
         return user!
     }
     func getUser(index: Int) -> UserModel {
-        let arrayUsers = users?.values as! [UserModel]
+        guard let values = users?.values else { return UserModel() }
+        let arrayUsers = Array(values)
         return arrayUsers[index]
     }
     func udpateUser(user: UserModel){

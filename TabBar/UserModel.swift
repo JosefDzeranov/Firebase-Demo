@@ -25,6 +25,9 @@ public class UserModel {
         
         reference = nil
     }
+    init(){
+        
+    }
     
     init(snapshot: DataSnapshot) {
         userId = snapshot.key
