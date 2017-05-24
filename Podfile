@@ -8,6 +8,7 @@ target 'TabBar' do
   # Pods for TabBar
     pod 'Firebase/Database'
     pod 'Firebase/Core'
+    pod 'Firebase/Storage'
     
 
   target 'TabBarTests' do

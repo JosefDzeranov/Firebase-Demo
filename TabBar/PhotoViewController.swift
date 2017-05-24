@@ -24,6 +24,10 @@ class PhotoViewController: UIViewController , UIImagePickerControllerDelegate, U
 
     }
     
+    @IBAction func UploadButton(_ sender: UIButton) {
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

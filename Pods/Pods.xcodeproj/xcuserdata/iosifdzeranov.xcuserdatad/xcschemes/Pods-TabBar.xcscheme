@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F135B2485C3B9D4C01E0D4F458F99382"
+               BlueprintIdentifier = "77B9DC4620AE0077EF78DB765AB4B618"
                BuildableName = "Pods_TabBar.framework"
                BlueprintName = "Pods-TabBar"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F135B2485C3B9D4C01E0D4F458F99382"
+            BlueprintIdentifier = "77B9DC4620AE0077EF78DB765AB4B618"
             BuildableName = "Pods_TabBar.framework"
             BlueprintName = "Pods-TabBar"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F135B2485C3B9D4C01E0D4F458F99382"
-            BuildableName = "Pods_TabBar.framework"
-            BlueprintName = "Pods-TabBar"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

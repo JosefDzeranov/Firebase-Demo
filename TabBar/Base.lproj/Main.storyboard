@@ -113,6 +113,15 @@
                                     <action selector="downloadButton:" destination="qfj-cq-Pg0" eventType="touchUpInside" id="Cz5-bw-ptt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho5-me-3Rh">
+                                <rect key="frame" x="28" y="596" width="319" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="UploadButton:" destination="qfj-cq-Pg0" eventType="touchUpInside" id="FqW-yh-xiM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
