@@ -107,13 +107,6 @@ class UsersTableViewController: UITableViewController  {
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { [weak self] (action, indexPath) in
             print("Delete tapped", indexPath.row)
             
-            
-            
-            
-            
-            
-            
-            
             if let userId = self?.dataSource.getUser(index: indexPath.row).userId {
                 // firebase reference removal
                 self?.reference.deleteValue(id: userId)
