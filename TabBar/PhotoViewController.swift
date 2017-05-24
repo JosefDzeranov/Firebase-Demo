@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var storage : StorageManager!
     let imagePicker =   UIImagePickerController()
     
     //MARK: - Outlets
@@ -19,20 +20,20 @@ class PhotoViewController: UIViewController , UIImagePickerControllerDelegate, U
     @IBAction func downloadButton(_ sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-      //  self.present(imagePicker, animated: true, completion: nil)
         self.present(imagePicker, animated: true, completion: nil)
 
     }
     
     @IBAction func UploadButton(_ sender: UIButton) {
-        
-        
+        guard let image = imageView.image else { return }
+        let data = ImageHelper.imageJPEGToData(image: image)
+        storage.UploadFile(data: dataç)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        storage  = StorageManager()
         imagePicker.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

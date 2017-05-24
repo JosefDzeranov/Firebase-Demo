@@ -13,8 +13,10 @@ class StorageManager{
     
     let reference = Storage.storage().reference(withPath: "images")
     
-    func UploadFile(data:Data, name:String) {
+    func UploadFile(data:Data) {
+        let name =  UUID().uuidString
         let ref = reference.child(name)
+        
         ref.putData(data, metadata: nil) { (storage, error) in
             if let error = error {
                 debugPrint(error)
