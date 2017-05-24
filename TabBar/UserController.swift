@@ -9,7 +9,7 @@
 import Foundation
 class UserController {
     
-    var users:[String : UserModel]?
+    var users:[String : UserModel]!
     
     init (){
         users = [:]
@@ -18,6 +18,14 @@ class UserController {
     func removeAllUser(){
         users?.removeAll()
     }
+    func removeUser(userId:String){
+        users.removeValue(forKey: userId)
+    }
+    func removeUser(index: Int){
+        let arrayKeys = users?.keys as! [String]
+        removeUser(userId: arrayKeys[index])
+    }
+    
     func addUser(user:UserModel){
         users?[user.userId] = user
     }
@@ -29,4 +37,9 @@ class UserController {
         let arrayUsers = users?.values as! [UserModel]
         return arrayUsers[index]
     }
+    func udpateUser(user: UserModel){
+        let userId = user.userId ?? ""
+        users?[userId] = user
+    }
+    
 }

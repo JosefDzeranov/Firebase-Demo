@@ -14,10 +14,11 @@ class UsersTableViewController: UITableViewController  {
     
     var reference : ReferenceManager! = nil
     
-    var users:[UserModel] = []
+    var dataSource : UserController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource  = UserController()
         reference =  ReferenceManager()
         print("UsersTableViewController viewDidLoad")
     }
@@ -30,7 +31,8 @@ class UsersTableViewController: UITableViewController  {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       users.removeAll()
+        dataSource.removeAllUser()
+        //users.removeAll()
         function()
         table.reloadData()
         print("viewWillAppear in UsersTableViewController")
@@ -44,12 +46,13 @@ class UsersTableViewController: UITableViewController  {
     
     func function() {
         reference.getReference().observe(DataEventType.childAdded, with: { [weak self] snapshot in
-            guard let numberOfItems = self?.users.count else {
+            guard let numberOfItems = self?.dataSource.users?.count else {
                 debugPrint("")
                 return
             }
             let user = UserModel(snapshot: snapshot)
-            self?.users.append(user)
+            self?.dataSource.addUser(user: user)
+            //self?.users.append(user)
 
             let indexPath = IndexPath(row: numberOfItems, section: 0)
             self?.table.insertRows(at: [indexPath], with: .top)
@@ -80,12 +83,14 @@ class UsersTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         print("numberOfRowsInSection")
-        return users.count
+        return (dataSource.users?.count)!
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "user_cell", for: indexPath)
-        let currentUser = users[indexPath.row]
+        //let currentUser = dataSource.users?[indexPath.row]
+        let currentUser = dataSource.getUser(index: indexPath.row)
+        
         let cellValue = "\(currentUser.firstName!) \(currentUser.secondName!) \(currentUser.thirdName!)"
         cell.textLabel?.text = cellValue
         cell.detailTextLabel?.text = currentUser.userId
@@ -109,11 +114,12 @@ class UsersTableViewController: UITableViewController  {
             
             
             
-            if let userId = self?.users[indexPath.row].userId {
+            if let userId = self?.dataSource.getUser(index: indexPath.row).userId {
                 // firebase reference removal
                 self?.reference.deleteValue(id: userId)
                 // datasource element removing
-                self?.users.remove(at: indexPath.row)
+                //self?.users.remove(at: indexPath.row)
+                self?.dataSource.removeUser(index: indexPath.row)
                 // table view element deletion
                 self?.table.deleteRows(at: [indexPath
                     ], with: .fade)
@@ -136,7 +142,9 @@ class UsersTableViewController: UITableViewController  {
         if(segue.identifier == "update_segue"){
             let updateView = segue.destination as! UpdateUserViewController
             let row = sender as! Int
-            let user = self.users[row]
+            //let user = self.users[row]
+            let user = dataSource.getUser(index: row)
+            
             debugPrint("prepare segue, user -> ", user)
             
             updateView.user = user
