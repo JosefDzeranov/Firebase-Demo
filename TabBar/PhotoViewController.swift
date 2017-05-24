@@ -27,7 +27,7 @@ class PhotoViewController: UIViewController , UIImagePickerControllerDelegate, U
     @IBAction func UploadButton(_ sender: UIButton) {
         guard let image = imageView.image else { return }
         let data = ImageHelper.imageJPEGToData(image: image)
-        storage.UploadFile(data: dataç)
+        storage.uploadFile(data: data)
     }
     
     override func viewDidLoad() {
