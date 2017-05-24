@@ -38,11 +38,6 @@ class UsersTableViewController: UITableViewController  {
         print("viewWillAppear in UsersTableViewController")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func function() {
         reference.getReference().observe(DataEventType.childAdded, with: { [weak self] snapshot in
